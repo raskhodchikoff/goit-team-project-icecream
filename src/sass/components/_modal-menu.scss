@@ -1,0 +1,223 @@
+.backdrop{
+    z-index: 9999;
+    position: fixed ;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--timing-duration), visibility var(--timing-duration);
+}
+  
+.modal{
+    overflow:auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 450px;
+    max-height: 95%;
+    background-color: var(--bg-color3);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+
+    @include min-mobile{
+        width: 100%;
+    }
+    @media screen and (max-width:768px) and (orientation: landscape) {
+        top: 10px;
+        transform: translate(-50%,);
+        overflow: scroll;
+    }
+
+    @include desktop{
+        max-width: 528px;
+        height: 600px;
+    }
+ 
+
+}
+  
+.modal__close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: transparent;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        fill: var(--title-font-color1);
+    }
+}
+
+
+
+.form__title{
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.form__input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    padding-left: 32px;
+    &:focus{
+        border-color: var(--title-font-color1);
+    }
+}
+
+  
+
+
+.form__label, .form__text{
+    display: block;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
+}
+
+.modal__wrap{
+    position: relative;
+    margin-bottom: 12px;
+    @include desktop {
+        margin-bottom: 5px;
+    }
+}
+
+.form__input-icon{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    left: 12px;
+    .form__input:focus + &{
+        fill: var(--title-font-color1) ;
+    }
+}
+
+.form__user-text{
+    width: 100%;
+    min-height: 90px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    resize: none;
+    &::placeholder{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus{
+        border-color: var(--title-font-color1);
+    }
+}
+
+
+
+.form__check-text{
+    margin-top: 15px;
+    margin-bottom:15px;
+    .form__check-wrap {
+        content: '';;
+        width: 16px;
+        height: 15px;
+        margin-right: 8px;
+        border: 2px solid #212121;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.form__check-text, .form__check-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: #757575;
+
+    @include desktop{
+        font-size: 13px;
+        line-height: 1.71;
+    }
+}
+
+
+
+.form__icon-check{
+    fill: transparent;
+}
+
+.form__check-link{
+    color: var(--title-font-color1);
+}
+
+.form__check{
+    &:checked + .form__check-text .form__check-wrap {
+        background-color: var(--title-font-color1);
+        border: none;
+    }
+    &:checked + .form__check-text .form__icon-check{
+        fill: #EEEEEE;
+    }
+}
+
+
+
+.form__btn{
+    display: block;
+    margin: 0 auto;
+    border:transparent;
+    background: var(--title-font-color1);
+    color:#ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border-radius: 44px;
+    padding: 10px 32px;
+    min-width: 200px;
+}
+
+.form__dissapear-text{
+    @media screen and (min-width: 1px) and (max-width: 480px) {
+        display: none;
+    }
+}

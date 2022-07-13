@@ -1,0 +1,27 @@
+// -------------------------utils
+@import './utils/basis';
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/hidden';
+@import './utils/keyframes';
+
+// -------------------------components
+@import './components/button-modal';
+@import './components/container';
+@import './components/mob-menu';
+@import './components/modal-menu';
+@import './components/product-cards';
+@import './components/modal-about';
+@import './components/modal-contacts';
+
+// -------------------------layou
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/reviews';
+@import './layout/contacts';
+@import './layout/footer';

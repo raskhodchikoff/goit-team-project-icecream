@@ -1,0 +1,368 @@
+.reviews {
+  background-color: var(--bg-color2);
+
+  // Мой ресет
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a,
+  button {
+    cursor: revert;
+  }
+
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  textarea {
+    white-space: revert;
+  }
+
+  meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+  }
+
+  ::placeholder {
+    color: unset;
+  }
+
+  :where([hidden]) {
+    display: none;
+  }
+
+  :where([contenteditable]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    // -webkit-line-break: after-white-space;
+  }
+
+  :where([draggable='true']) {
+    -webkit-user-drag: element;
+  }
+}
+
+// Slick Edition
+
+.reviews__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.reviews__slider-list {
+  width: 280px;
+  height: 528px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 720px;
+    height: 376px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1200px;
+    height: 368px;
+    margin-top: 120px;
+  }
+}
+
+.reviews__avatar {
+  width: 85px;
+  height: 85px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+.reviews__box {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  height: 308px;
+
+  background-color: #fafafa;
+
+  @media screen and (min-width: 768px) {
+    width: 620px;
+    height: 164px;
+
+    background-color: #fdfdfd;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1034px;
+    height: 138px;
+
+    background-color: #fafafa;
+    opacity: 1;
+  }
+}
+
+.reviews__text-box {
+  position: relative;
+  display: block;
+  z-index: 2;
+  width: 180px;
+  height: 250px;
+  margin-top: 43px;
+  margin-bottom: 26px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 255%;
+  text-align: center;
+
+  color: var(--paragraph-color1);
+
+  background-image: repeating-linear-gradient(180deg, transparent, transparent 29px, #e1e1e1 31px);
+  background-clip: content-box;
+
+  @media screen and (min-width: 768px) {
+    width: 608px;
+    height: 98px;
+    margin-top: 37px;
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    line-height: 216%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 822px;
+    height: 75px;
+    margin-top: 47px;
+    margin-bottom: 39px;
+
+    font-size: 16px;
+    line-height: 186%;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    top: -15px;
+    display: block;
+    content: '';
+    height: 40px;
+    width: 54px;
+    background-image: url(../images/quote.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+
+    @media screen and (min-width: 768px) {
+      left: 21px;
+      top: -17px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      left: 8px;
+      top: -16px;
+    }
+  }
+}
+
+.reviews__slider-text {
+  width: 176px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 502px;
+  }
+
+  @media screen and (min-width: 1279px) {
+    width: 750px;
+  }
+}
+
+.reviews__location {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 186%;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-image: url(../images/review-points.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 4px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 16px;
+    }
+  }
+}
+
+/* Setting Slick Dots */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 48px !important;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 80px !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 120px !important;
+  }
+}
+
+.reviews__slick-dots {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  margin-bottom: 120px;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+
+.reviews__slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 4px;
+  padding: 0;
+
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    margin: 0 9px;
+  }
+}
+
+.reviews__slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.reviews__slick-dots li button:hover:before,
+.reviews__slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.reviews__slick-dots li button:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: block;
+  content: '';
+  height: 10px;
+  width: 10px;
+  background-color: var(--bg-color2);
+  background-image: url(../images/pagination.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.reviews__slick-dots li.slick-active button:before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: block;
+  content: '';
+  height: 10px;
+  width: 10px;
+  background-color: var(--bg-color2);
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0;
+  @media screen and (min-width: 768px) {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.reviews__slick-dots {
+}

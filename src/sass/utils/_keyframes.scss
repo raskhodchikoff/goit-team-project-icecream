@@ -1,0 +1,9 @@
+@keyframes rotateY {
+  0% {
+    transform: perspective(600px) rotateY(-45deg);
+  }
+
+  100% {
+    transform: perspective(600px) rotateY(45deg);
+  }
+}
